@@ -10,49 +10,50 @@ import Examples from './components/Examples';
 Vue.use(VueRouter);
 
 const routes = [{
-  name: 'Home',
-  path: '*',
-  redirect: '/home'
+    name: 'Home',
+    path: '*',
+    redirect: '/home'
 }, {
-  name: 'Home',
-  path: '/',
-  redirect: '/home'
+    name: 'Home',
+    path: '/',
+    redirect: '/home'
 }, {
-  name: 'Home',
-  path: '/home',
-  component: Home
+    name: 'Home',
+    path: '/home',
+    component: Home
 }, {
-  name: 'Install',
-  path: '/install',
-  component: Install
+    name: 'Install',
+    path: '/install',
+    component: Install
 }, {
-  name: 'Options',
-  path: '/options',
-  component: Options
+    name: 'Options',
+    path: '/options',
+    component: Options
 }, {
-  name: 'Events',
-  path: '/events',
-  component: Events
+    name: 'Events',
+    path: '/events',
+    component: Events
 }, {
-  name: 'Examples',
-  path: '/examples',
-  component: Examples
+    name: 'Examples',
+    path: '/examples',
+    component: Examples
 }];
 
 export default new VueRouter({
-  base: '/vue-friendly-iframe/',
-  routes,
-  scrollBehavior(to) {
-    if (to.name === 'Home') {
-      return {
-        x: 0,
-        y: 0
-      };
-    }
+    // base: '/vue-friendly-iframe/',
+    // base: '/',
+    routes,
+    scrollBehavior(to) {
+        if (to.name === 'Home') {
+            return {
+                x: 0,
+                y: 0
+            };
+        }
 
-    return {
-      x: 0,
-      y: 550
-    };
-  }
+        return {
+            x: 0,
+            y: 550
+        };
+    }
 });
