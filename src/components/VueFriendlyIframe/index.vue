@@ -92,9 +92,11 @@ export default {
       iframeDoc.close(); //iframe onload event happens
     },
     reinitIframe: utils.debounce(vm => {
+      // console.log(vm);
       vm.removeIframe();
       vm.initIframe();
     }, 200),
+    
     initIframe() {
       this.iframeEl = document.createElement('iframe');
       this.iframeEl.setAttribute('style', 'visibility: hidden; position: absolute; top: -99999px; border: none;');

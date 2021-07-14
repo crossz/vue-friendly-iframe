@@ -10,11 +10,9 @@ import Examples from './components/Examples';
 Vue.use(VueRouter);
 
 const routes = [{
-    name: 'Home',
     path: '*',
     redirect: '/home'
 }, {
-    name: 'Home',
     path: '/',
     redirect: '/home'
 }, {
@@ -24,7 +22,7 @@ const routes = [{
 }, {
     name: 'Install',
     path: '/install',
-    component: Install
+    iframeComponent: Install
 }, {
     name: 'Options',
     path: '/options',
@@ -36,7 +34,7 @@ const routes = [{
 }, {
     name: 'Examples',
     path: '/examples',
-    component: Examples
+    iframeComponent: Examples
 }];
 
 export default new VueRouter({
