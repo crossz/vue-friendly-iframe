@@ -1,9 +1,9 @@
 <template>
     <div>
         <!-- Vue的router-view -->
-        <keep-alive>
+        <!-- <keep-alive> -->
             <router-view></router-view>
-        </keep-alive>
+        <!-- </keep-alive> -->
 
         <!-- iframe页 -->
         <component
